@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+  <title>{{ config('app.name', 'kuisioner') }}</title>
+
+  <!-- General CSS Files -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+  <!-- CSS Libraries -->
+  <link rel="stylesheet" href="{{ url('node_modules/selectric/public/selectric.css') }}">
+
+  <!-- Template CSS -->
+  <link rel="stylesheet" href="{{ url('assets/css/style.css') }}">
+  <link rel="stylesheet" href="{{ url('assets/css/components.css') }}">
+</head>
+<body>
+    <div id="app">
+      <section class="section">
+        <div class="container mt-5">
+          <div class="row">
+            <div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-8 offset-lg-2 col-xl-8 offset-xl-2">
+            
+              <div class="row">
+                <table width="100%" border="1">
+                    <tr>
+                        <td width="10%">
+                            <img style="max-height:60px;" height="60px" src="[[data::logo_rs]]" />
+                        </td>
+                        <td width="50%" align="center">
+                            <h1>HEALTH QUESTIONNAIRE</h1> 
+                        </td>
+                    </tr>
+                </table>
+                <table width="100%" border="1">
+                    <tr>
+                        <th width="10%" align="center">part </th>
+                        <th width="25%" align="center">Symptoms question</th>
+                        <th width="5%" align="center">yes (check)</th>
+                        <th width="10%" align="center">part </th>
+                        <th width="25%" align="center">Symptoms question</th>
+                        <th width="5%" align="center">yes (check) </th>
+                    </tr>
+                    <tr>
+                        <th align="center" rowspan="3"> General Symptoms </th>
+                        <td >Weigth loss without any specific reason</td>
+                        <td align="center"><div id="check"><input type="checkbox" name="general_symptoms"></div></td>
+                        <td align="center"rowspan="4"></td>
+                        <td >Abdominal destension with gas</td>
+                        <td align="center"><div id="check"><input type="checkbox" name="general_symptoms"></div></td>
+                    </tr>
+                    <tr>
+                        <td >Easyly feeling fatigue</td>
+                        <td align="center"><div id="check"><input type="checkbox" name="general_symptoms"></div></td>
+                        <td >Diarhea or/and constipation</td>
+                        <td align="center"><div id="check"><input type="checkbox" name="general_symptoms"></div></td>
+            
+                    </tr>
+                    <tr>
+                        <td>Touching any lump</td>
+                        <td align="center"><div id="check"><input type="checkbox" name="general_symptoms"></div></td>
+                        <td>Bloody stool</td>
+                        <td align="center"><div id="check"><input type="checkbox" name="general_symptoms"></div></td>
+                    </tr>
+                    <tr>
+                        <th align="center" rowspan="4">Eyes and Ears</th>
+                        <td >Red eye or eye pain</td>
+                        <td align="center"><div id="check"><input type="checkbox" name="eyes_ears"></div></td>
+                        <td >Significant change of bowel habit recntly </td>
+                        <td align="center"><div id="check"><input type="checkbox" name="cardio_vascular"></div></td>
+                    </tr>
+                    <tr>
+                        <td >Blurred vision</td>
+                        <td align="center"><div id="check"><input type="checkbox" name="eyes_ears"></div></td>
+                        <th align="center" rowspan="3">Cardio Vascular</th>
+                        <td >Chest pain or discomfort on exertion</td>
+                        <td align="center"><div id="check"><input type="checkbox" name="cardio_vascular"></div></td>
+                    </tr>
+                    <tr>
+                        <td >Hearing disturbance</td>
+                        <td align="center"><div id="check"><input type="checkbox" name="eyes_ears"></div></td>
+                        <td >Palpitatuion</td>
+                        <td align="center"><div id="check"><input type="checkbox" name="cardio_vascular"></div></td>
+                    </tr>
+                    <tr>
+                        <td>Ringing in the ear (tinnitus)</td>
+                        <td align="center"><div id="check"><input type="checkbox" name="eyes_ears"></div></td>
+                        <td>Irregular pulse</td>
+                        <td align="center"><div id="check"><input type="checkbox" name="cardio_vascular"></div></td>
+                    </tr>
+                    <tr>
+                        <th align="center" rowspan="5">Respiratory</th>
+                        <td>Dry cough</td>
+                        <td align="center"><div id="check"><input type="checkbox" name="respiratory"></div></td>
+                        <th align="center" rowspan="8">Musculoskeletal</th>
+                        <td> Moring stifness (having diffculty in unfolding fingers)</td>
+                        <td align="center"><div id="check"><input type="checkbox" name="musculoskeletal"></div></td>
+                    </tr>
+                    <tr>
+                        <td>Severe cough and sputum</td>
+                        <td align="center"><div id="check"><input type="checkbox" name="respiratory"></div></td>
+                        <td>stifness and/or pain on the every part on joint</td>
+                        <td align="center"><div id="check"><input type="checkbox" name="musculoskeletal"></div></td>
+                    </tr>
+                    <tr>
+                        <td>Bloody sputum</td>
+                        <td align="center"><div id="check"><input type="checkbox" name="respiratory"></div></td>
+                        <td>Low back pain</td>
+                        <td align="center"><div id="check"><input type="checkbox" name="musculoskeletal"></div></td>
+                    </tr>
+                    <tr>
+                        <td>Hoarse Voice</td>
+                        <td align="center"><div id="check"><input type="checkbox" name="respiratory"></div></td>
+                        <td>Numbness of legs with back pain </td>
+                        <td align="center"><div id="check"><input type="checkbox" name="musculoskeletal"></div></td>
+                    </tr>
+                    <tr>
+                        <td>Chest discomfort with breathing</td>
+                        <td align="center"><div id="check"><input type="checkbox" name="respiratory"></div></td>
+                        <td>Pain and swelling  </td>
+                        <td align="center"><div id="check"><input type="checkbox" name="musculoskeletal"></div></td>
+                    </tr>
+                    <tr>
+                        <th align="center" rowspan="4">Digestive</th>
+                        <td>Epicgastric soreness during fasting</td>
+                        <td align="center"><div id="check"><input type="checkbox" name="Digestive"></div></td>
+                        <td> Numbness on arm and/or leg</td>
+                        <td align="center"><div id="check"><input type="checkbox" name="musculoskeletal"></div></td>
+                    </tr>
+                    <tr>
+                        <td>Indigestion</td>
+                        <td align="center"><div id="check"><input type="checkbox" name="Digestive"></div></td>
+                        <td> Swelling and pain on first toe</td>
+                        <td align="center"><div id="check"><input type="checkbox" name="musculoskeletal"></div></td>
+                    </tr>
+                    <tr>
+                        <tr>
+                            <td colspan="4">Rigurgitation and burning sensation in the chest</td>
+                            <td align="center"><div id="check"><input type="checkbox" name="Digestive"></div></td>
+                    </tr>
+                </table>
+                <br>
+
+            </div>
+        </div>
+    </div>  
