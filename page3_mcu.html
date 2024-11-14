@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+  <title>{{ config('app.name', 'kuisioner') }}</title>
+
+  <!-- General CSS Files -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+  <!-- CSS Libraries -->
+  <link rel="stylesheet" href="{{ url('node_modules/selectric/public/selectric.css') }}">
+
+  <!-- Template CSS -->
+  <link rel="stylesheet" href="{{ url('assets/css/style.css') }}">
+  <link rel="stylesheet" href="{{ url('assets/css/components.css') }}">
+</head>
+<body style="background-color:  #4d98d3;">
+    <div id="app">
+      <section class="section">
+        <div class="container mt-5" style="width: 90vw; max-width: 620px; padding: 2em 2em; background-color: #fff; margin: 1em auto;
+        border-radius: 0.5em;">
+          <div class="row">
+            <div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-8 offset-lg-2 col-xl-8 offset-xl-2">
+            
+              <div class="row">
+                <table width="100%" border="0">
+                    <tr>
+                        <td width="100%" align="center">
+                            <h1>HEALTH QUESTIONNAIRE</h1> 
+                        </td>
+                    </tr>
+                </table>  
+                    <div class="wrapper">
+                    <h4>Endocrine</h4> 
+                        <div class="group">
+                            <input type="checkbox" name="frequent">
+                            <label for="frequent">Frequent feeling thirsty and/or voiding</label>
+                        </div>
+                        <div class="group">
+                            <input type="checkbox" name="diffculty">
+                            <label for="Diffculty">Diffculty standing of heat or cold whether</label>
+                        </div>
+                        <div class="group">
+                            <input type="checkbox" name="flushing">
+                            <label for="flushing">Hot flushing of face</label>
+                        </div>
+                    </div>   
+                    <div class="wrapper">
+                    <h4>Urology</h4> 
+                        <div class="group">
+                            <input type="checkbox" name="urination">
+                            <label for="urination">Frequent urination</label>
+                        </div>
+                        <div class="group">
+                            <input type="checkbox" name="nutoria">
+                            <label for="nutoria">Frequent urination at night (nutoria)</label>
+                        </div>
+                        <div class="group">
+                            <input type="checkbox" name="back_pain">
+                            <label for="back_pain">back pain or flank pain</label>
+                        </div>
+                        <div class="group">
+                            <input type="checkbox" name="Urine_residual">
+                            <label for="Urine residual">Urine residual sense</label>
+                        </div>
+                        <div class="group">
+                            <input type="checkbox" name="bloody_urine">
+                            <label for="bloody_urine">Bloody urine</label>
+                        </div>
+                        <div class="group">
+                            <input type="checkbox" name="dysuria">
+                            <label for="dysuria">Burning sensation on urine (dysuria)</label>
+                        </div>
+                    </div>
+                    <div class="wrapper">
+                        <h4>*Please, write down an other discomfort symptoms</h4>
+                        <div class="subject">
+                            <div class="col-75">
+                                <textarea id="subject" name="subject" placeholder="Write something.." style="width: 400px;"></textarea>
+                              </div>
+                        </div>
+                    </div>
+                    <div class="wrapper">
+                        <table>
+                            <tr>
+                                <td align="left" rowspan="1" colspan="3"><h4>2. Questions regarding on diseases </h4><br>
+                                Have you ever been diagnosed and/or undergoing medicafition treatment for follow diseases</td>
+                            </tr>
+                            <tr>
+                                <th>Name of disease</th>
+                                <th>diagnosed</th>
+                                <th>Medication treatment</th>
+                            </tr>
+                            <tr>
+                                <td>Cerebro-vascular attack (stroke)</td>
+                                <td align="center"><div id="check"><input type="checkbox" name="diagnosed"></div></td>
+                                <td align="center"><div id="check"><input type="checkbox" name="treatment"></div></td>
+                            </tr>
+                            <tr>
+                                <td>Heart disease (myocardial infarction/angina pectoris)</td>
+                                <td align="center"><div id="check"><input type="checkbox" name="diagnosed"></div></td>
+                                <td align="center"><div id="check"><input type="checkbox" name="treatment"></div></td>
+                            </tr>
+                            <tr>
+                                <td>Hypertension</td>
+                                <td align="center"><div id="check"><input type="checkbox" name="diagnosed"></div></td>
+                                <td align="center"><div id="check"><input type="checkbox" name="treatment"></div></td>
+                            </tr>
+                            <tr>
+                                <td>Diabetes</td>
+                                <td align="center"><div id="check"><input type="checkbox" name="diagnosed"></div></td>
+                                <td align="center"><div id="check"><input type="checkbox" name="treatment"></div></td>
+                            </tr>
+                            <tr>
+                                <td>Dyslipidemia</td>
+                                <td align="center"><div id="check"><input type="checkbox" name="diagnosed"></div></td>
+                                <td align="center"><div id="check"><input type="checkbox" name="treatment"></div></td>
+                            </tr>
+                            <tr>
+                                <td>Tuberculosis</td>
+                                <td align="center"><div id="check"><input type="checkbox" name="diagnosed"></div></td>
+                                <td align="center"><div id="check"><input type="checkbox" name="treatment"></div></td>
+                            </tr>
+                            <tr>
+                                <td>Asthma</td>
+                                <td align="center"><div id="check"><input type="checkbox" name="diagnosed"></div></td>
+                                <td align="center"><div id="check"><input type="checkbox" name="treatment"></div></td>
+                            <tr>
+                            <tr>
+                                <td>Liver function test abnormality</td>
+                                <td align="center"><div id="check"><input type="checkbox" name="diagnosed"></div></td>
+                                <td align="center"><div id="check"><input type="checkbox" name="treatment"></div></td>
+                            </tr>
+                            <tr>
+                                <td>Viral hepatitis (B, C type)</td>
+                                <td align="center"><div id="check"><input type="checkbox" name="diagnosed"></div></td>
+                                <td align="center"><div id="check"><input type="checkbox" name="treatment"></div></td>
+                            </tr>
+                            <tr>
+                                <td>Gallstone</td>
+                                <td align="center"><div id="check"><input type="checkbox" name="diagnosed"></div></td>
+                                <td align="center"><div id="check"><input type="checkbox" name="treatment"></div></td>
+                            </tr>
+                            <tr>
+                                <td>Chronic renal failure</td>
+                                <td align="center"><div id="check"><input type="checkbox" name="diagnosed"></div></td>
+                                <td align="center"><div id="check"><input type="checkbox" name="treatment"></div></td>
+                            </tr>
+                            <tr>
+                                <td>Thyroid desease</td>
+                                <td align="center"><div id="check"><input type="checkbox" name="diagnosed"></div></td>
+                                <td align="center"><div id="check"><input type="checkbox" name="treatment"></div></td>
+                            </tr>
+                            <tr>
+                                <td>Gastrointestinal disorder</td>
+                                <td align="center"><div id="check"><input type="checkbox" name="diagnosed"></div></td>
+                                <td align="center"><div id="check"><input type="checkbox" name="treatment"></div></td>
+                            </tr>
+                            <tr>
+                                <td>Other</td>
+                                <td align="center"><div id="check"><input type="checkbox" name="diagnosed"></div></td>
+                                <td align="center"><div id="check"><input type="checkbox" name="treatment"></div></td>
+                            </tr>
+                        </table>
+
+                        <footer>
+                            <a href="page2_mcu.html" class="previous round">&#8249;</a>
+                            <a href="page4_mcu.html" class="next round">&#8250;</a>
+                         </footer>
+
+    <style>
+        input {
+            position: relative;
+            width: 20px;
+            height: 20px;
+            background-color: #cfcfcf;
+            border-radius: .25rem;
+            appearance: none;
+            cursor: pointer;
+        }
+        input[type="checkbox"]:checked{
+        background-color: lightgreen;
+        }
+        input[type="checkbox"]::before{
+        content: '';
+        position: absolute;
+        top: 3px;
+        left: 7px;
+        width: 7px;
+        height: 13px;
+        border: 4px solid transparent;
+        border-left: none;
+        border-top: none;
+        transform: rotate(45deg) scale(1);
+        }
+        input[type="checkbox"]:checked:before{
+        border-color: #fff;
+        animation: checkAnim .2s ease;
+        }
+        label{
+            font-size: 1rem;
+            user-select: none;
+    
+        }
+        a {
+        text-decoration: none;
+        display: inline-block;
+        padding: 8px 16px;
+        }
+    
+        a:hover {
+        background-color: #ddd;
+        color: black;
+        }
+    
+        .previous {
+        background-color: #f1f1f1;
+        color: black;
+        }
+        footer {
+            padding: 20px;
+        }
+    
+        .next {
+        background-color: #04AA6D;
+        color: white;
+        }
+    
+        .round {
+        border-radius: 50%;
+        }
+    </style>  

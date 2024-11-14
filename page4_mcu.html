@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+  <title>{{ config('app.name', 'kuisioner') }}</title>
+
+  <!-- General CSS Files -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+  <!-- CSS Libraries -->
+  <link rel="stylesheet" href="{{ url('node_modules/selectric/public/selectric.css') }}">
+
+  <!-- Template CSS -->
+  <link rel="stylesheet" href="{{ url('assets/css/style.css') }}">
+  <link rel="stylesheet" href="{{ url('assets/css/components.css') }}">
+</head>
+<body style="background-color:  #4d98d3;">
+    <div id="app">
+      <section class="section">
+        <div class="container mt-5" style="width: 90vw; max-width: 620px; padding: 2em 2em; background-color: #fff; margin: 1em auto;
+        border-radius: 0.5em;">
+          <div class="row">
+            <div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-8 offset-lg-2 col-xl-8 offset-xl-2">
+            
+              <div class="row">
+                <table width="100%" border="0">
+                    <tr>
+                        <td width="100%" align="center">
+                            <h1>HEALTH QUESTIONNAIRE</h1> 
+                        </td>
+                    </tr>
+                </table>
+                   <div class="wrapper">
+                    <h4>3. Questions regarding on cancer</h4> 
+                    <p>Have you been diagnosed anuy following cancers?</p>
+                    <h4>Benign tumor</h4>
+                        <div class="group">
+                            <input type="checkbox" name="gastric">
+                            <label for="Gastricr">Gastric benign tumor (polyp, subepitheilal lesion)</label>
+                        </div>
+                        <div class="group">
+                            <input type="checkbox" name="Colon_polyp">
+                            <label for="Colon polyp">Colon polyp</label>
+                        </div>
+                        <div class="group">
+                            <input type="checkbox" name="thyroid">
+                            <label for="Thyroid">Thyroid benign nodule</label>
+                        </div>
+                        <div class="group">
+                            <input type="checkbox" name="Liver">
+                            <label for="Liver">Liver benign, nodule (hemangioma,cyst, etc)</label>
+                        </div>
+                        <div class="group">
+                            <input type="checkbox" name="benign_nodule">
+                            <label for="Benign nodule">Lung benign nodule</label>
+                        </div>
+                        <div class="group">
+                            <input type="checkbox" name="galiblader">
+                            <label for="Galiblader">Galiblader polyp</label>
+                        </div>
+                        <div class="group">
+                            <input type="checkbox" name="breast_nodule">
+                            <label for="Breast nodule">Breast nodule</label>
+                        </div>
+                        <div class="group">
+                            <input type="checkbox" name="uterus_myoma">
+                            <label for="Uterus myoma">Uterus myoma</label>
+                        </div>
+                        <div class="group">
+                            <input type="checkbox" name="ovary_benign">
+                            <label for="Ovary benign">Ovary benign tumor</label>
+                        </div>
+                        <div class="group">
+                            <input type="checkbox" name="benign_tumor">
+                            <label for="Benign tumor">Any other benign tumor</label>
+                        </div>
+                    </div>  
+                    <div class="wrapper">
+                    <h4>Malignant tumor</h4> 
+                        <div class="group">
+                            <input type="checkbox" name="gastric_cancer">
+                            <label for="Gastric cancer">Gastric cancer</label>
+                        </div>
+                        <div class="group">
+                            <input type="checkbox" name="rectal_cancer">
+                            <label for="rectal cancer">Colon and/or rectal cancer</label>
+                        </div>
+                        <div class="group">
+                            <input type="checkbox" name="thyroid_cancer">
+                            <label for="Thyroid cancer">Thyroid cancer</label>
+                        </div>
+                        <div class="group">
+                            <input type="checkbox" name="live_cancer">
+                            <label for="Live cancer">Live cancer</label>
+                        </div>
+                        <div class="group">
+                            <input type="checkbox" name="Lung_cancer">
+                            <label for="Lung cancer">Lung cancer</label>
+                        </div>
+                        <div class="group">
+                            <input type="checkbox" name="galibladder_cancer">
+                            <label for="Galibladder cancer">Galibladder cancer</label>
+                        </div>
+                        <div class="group">
+                            <input type="checkbox" name="breast_cancer">
+                            <label for="Breast cancer">Breast cancer</label>
+                        </div>
+                        <div class="group">
+                            <input type="checkbox" name="Cervical_cancer">
+                            <label for="Cervical cancer">Cervical cancer</label>
+                        </div>
+                        <div class="group">
+                            <input type="checkbox" name="ovary_cancer">
+                            <label for="Ovary cancer">Ovary cancer</label>
+                        </div>
+                        <div class="group">
+                            <input type="checkbox" name="other">
+                            <label for="other">Any other cancer</label>
+                        </div>
+                    </div>   
+                    
+                    <div class="wrapper">
+                        <h4>4. Question regarding on mecations</h4>
+                        <p>Please write down any mediciine you took last 7 days</p>
+                        <div class="subject">
+                            <div class="col-75">
+                                <textarea id="subject" name="subject" placeholder="Write something.." style="width: 400px;"></textarea>
+                              </div>
+                        </div>
+                    </div>
+                    <footer>
+                        <a href="page3_mcu.html" class="previous round">&#8249;</a>
+                        <a href="page5_mcu.html" class="next round">&#8250;</a>
+                     </footer>
+
+                    <style>
+                        input {
+                            position: relative;
+                            width: 20px;
+                            height: 20px;
+                            background-color: #cfcfcf;
+                            border-radius: .25rem;
+                            appearance: none;
+                            cursor: pointer;
+                        }
+                        input[type="checkbox"]:checked{
+                        background-color: lightgreen;
+                        }
+                        input[type="checkbox"]::before{
+                        content: '';
+                        position: absolute;
+                        top: 3px;
+                        left: 7px;
+                        width: 7px;
+                        height: 13px;
+                        border: 4px solid transparent;
+                        border-left: none;
+                        border-top: none;
+                        transform: rotate(45deg) scale(1);
+                        }
+                        input[type="checkbox"]:checked:before{
+                        border-color: #fff;
+                        animation: checkAnim .2s ease;
+                        }
+                        label{
+                            font-size: 1rem;
+                            user-select: none;
+                    
+                        }
+                        a {
+                        text-decoration: none;
+                        display: inline-block;
+                        padding: 8px 16px;
+                        }
+                    
+                        a:hover {
+                        background-color: #ddd;
+                        color: black;
+                        }
+                    
+                        .previous {
+                        background-color: #f1f1f1;
+                        color: black;
+                        }
+                        footer {
+                        padding: 20px;
+                        }
+                        .next {
+                        background-color: #04AA6D;
+                        color: white;
+                        }
+                    
+                        .round {
+                        border-radius: 50%;
+                        }
+                    </style>  

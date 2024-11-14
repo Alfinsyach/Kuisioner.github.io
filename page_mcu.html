@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+  <title>{{ config('app.name', 'kuisioner') }}</title>
+
+  <!-- General CSS Files -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+  <!-- CSS Libraries -->
+  <link rel="stylesheet" href="{{ url('node_modules/selectric/public/selectric.css') }}">
+
+  <!-- Template CSS -->
+  <link rel="stylesheet" href="{{ url('assets/css/style.css') }}">
+  <link rel="stylesheet" href="{{ url('assets/css/components.css') }}">
+</head>
+<body style="background-color:  #4d98d3; ">
+    <div id="app">
+      <section class="section">
+        <div class="container mt-5" style="width: 90vw; max-width: 620px; padding: 2em 2em; background-color: #fff; margin: 1em auto;
+        border-radius: 0.5em; ">
+          <div class="row">
+            <div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-8 offset-lg-2 col-xl-8 offset-xl-2">
+            
+              <class="row">
+                <table width="100%" border="0">
+                    <tr>
+                        <td width="100%" align="center">
+                            <h1>HEALTH QUESTIONNAIRE</h1> 
+                        </td>
+                    </tr>
+                </table>
+                
+                <div class="wrapper">
+                    <h4>General Symptoms</h4> 
+                        <div class="group">
+                            <input type="checkbox" name="weigth_loss">
+                            <label for="Weigth loss">Weigth loss without any specific reason</label>
+                        </div>
+                        <div class="group">
+                            <input type="checkbox" name="easyly">
+                            <label for="Easyly">Easyly feeling fatigue</label>
+                        </div>
+                        <div class="group">
+                            <input type="checkbox" name="touching">
+                            <label for="Touching">Touching any lump</label>
+                        </div>
+                   </div>
+            
+                   <div class="wrapper">
+                    <h4>Eyes and Ears</h4> 
+                        <div class="group">
+                            <input type="checkbox" name="red_eye">
+                            <label for="Red eye">Red eye or eye pain</label>
+                        </div>
+                        <div class="group">
+                            <input type="checkbox" name="blurred_vision">
+                            <label for="Blurred vision">Blurred vision</label>
+                        </div>
+                        <div class="group">
+                            <input type="checkbox" name="hearing">
+                            <label for="Hearing">Hearing disturbance</label>
+                        </div>
+                        <div class="group">
+                            <input type="checkbox" name="ringing">
+                            <label for="Ringing">Ringing in the ear (tinnitus)</label>
+                        </div>
+                   </div>
+                   <div class="wrapper">
+                    <h4>Respiratory</h4> 
+                        <div class="group">
+                            <input type="checkbox" name="dry_cough">
+                            <label for="Dry cough">Dry cough</label>
+                        </div>
+                        <div class="group">
+                            <input type="checkbox" name="Severe_cough">
+                            <label for="Severe cough">Severe cough and sputum</label>
+                        </div>
+                        <div class="group">
+                            <input type="checkbox" name="Bloody_sputum">
+                            <label for="Bloody sputum">Bloody sputum</label>
+                        </div>
+                        <div class="group">
+                            <input type="checkbox" name="hoarse_voice">
+                            <label for="Hoarse Voice">Hoarse Voice</label>
+                        </div>
+                        <div class="group">
+                            <input type="checkbox" name="chest_discomfort">
+                            <label for="Chest discomfort">Chest discomfort with breathing</label>
+                        </div>
+                   </div>
+                   <div class="wrapper">
+                    <h4>Digestive</h4> 
+                        <div class="group">
+                            <input type="checkbox" name="epicgastric">
+                            <label for="Epicgastric">Epicgastric soreness during fasting</label>
+                        </div>
+                        <div class="group">
+                            <input type="checkbox" name="indigestion">
+                            <label for="Indigestion">Indigestion</label>
+                        </div>
+                        <div class="group">
+                            <input type="checkbox" name="rigurgitation">
+                            <label for="rigurgitation">Rigurgitation and burning sensation in the chest</label>
+                        </div>
+                   </div>
+                   
+                 <footer>
+                    <a href="page2_mcu.html" class="next round">&#8250;</a>
+                 </footer>
+                   
+                
+                    
+                </table>
+                <br>
+            </div>
+        </div>
+    </div>
+<style>
+    .wrapper {
+        
+    }
+    input {
+        position: relative;
+        width: 20px;
+        height: 20px;
+        background-color: #cfcfcf;
+        border-radius: .25rem;
+        appearance: none;
+        cursor: pointer;
+    }
+    input[type="checkbox"]:checked{
+    background-color: lightgreen;
+    }
+    input[type="checkbox"]::before{
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 7px;
+    width: 7px;
+    height: 13px;
+    border: 4px solid transparent;
+    border-left: none;
+    border-top: none;
+    transform: rotate(45deg) scale(1);
+    }
+    input[type="checkbox"]:checked:before{
+    border-color: #fff;
+    animation: checkAnim .2s ease;
+    }
+    label{
+        font-size: 1rem;
+        user-select: none;
+
+    }
+    a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+    }
+
+    a:hover {
+    background-color: #ddd;
+    color: black;
+    }
+
+    .previous {
+    background-color: #f1f1f1;
+    color: black;
+    }
+    footer {
+            padding: 20px;
+        }
+
+    .next {
+    background-color: #04AA6D;
+    color: white;
+    }
+
+    .round {
+    border-radius: 50%;
+    }
+</style>  

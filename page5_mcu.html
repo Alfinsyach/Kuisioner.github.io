@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+  <title>{{ config('app.name', 'kuisioner') }}</title>
+
+  <!-- General CSS Files -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+  <!-- CSS Libraries -->
+  <link rel="stylesheet" href="{{ url('node_modules/selectric/public/selectric.css') }}">
+
+  <!-- Template CSS -->
+  <link rel="stylesheet" href="{{ url('assets/css/style.css') }}">
+  <link rel="stylesheet" href="{{ url('assets/css/components.css') }}">
+</head>
+<body style="background-color:  #4d98d3;">
+    <div id="app">
+      <section class="section">
+        <div class="container mt-5" style="width: 90vw; max-width: 620px; padding: 2em 2em; background-color: #fff; margin: 1em auto;
+        border-radius: 0.5em;">
+          <div class="row">
+            <div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-8 offset-lg-2 col-xl-8 offset-xl-2">
+            
+              <div class="row">
+                <table width="100%" border="0">
+                    <tr>
+                        <td width="100%" align="center">
+                            <h1>HEALTH QUESTIONNAIRE</h1> 
+                        </td>
+                    </tr>
+                </table>
+                   <div class="wrapper">
+                    <h4>5. Questions regarding on an experinece of endoscopy</h4> 
+                        <div class="group">
+                            <input type="checkbox" name="endoscopy">
+                            <label for="Endoscopy">Endoscopy</label>
+                        </div>
+                        <div class="group">
+                            <input type="checkbox" name="colonscopy">
+                            <label for="Colonscopy">Colonscopy</label>
+                        </div>
+                    </div>
+                   <div class="wrapper">
+                    <h4>6. Questions regarding on habbits</h4> 
+                    <h4>6-1. Questions about smoking</h4>
+                    <p>Have you ever smoked in your life</p>
+                        <div class="group">
+                            <input type="checkbox" name="smoking">
+                            <label for="smoking">Yes, I Still Smoked</label><br>
+                            <label for="duration">(duration: </label>
+                            <input type="number" id="duration" name="duration" min="1" max="100">years),
+                            <label for="duration">(Cigarettes </label>
+                            <input type="number" id="duration" name="duration" min="1" max="100">day),<br>
+                            <input type="checkbox" name="used_smoked"><label for="used_smoked">I used to smoke but stopped</label><br>
+                            <input type="checkbox" name="never"><label for="never">never</label>
+                   <div class="wrapper">
+                    <h4>6-2. Questions on drinking</h4> 
+                    <p>How Many times do you drink alcohol a week</p>
+                    <div class="group">
+                        <label for="times">times: </label>
+                        <input type="number" id="duration" name="duration" min="1" max="100">/week, averange drinking quantity.
+                    </div>
+                    <div class="wrapper">
+                    <h4>6-3. Questions on exercising</h4> 
+                    <p>How many days do you exercise for more than 30 minutes per a week 
+                        (until you are almost out of breath) ?</p>
+                        <div class="group">
+                            <input type="checkbox" name="none">
+                            <label for="None">None</label>
+                        </div>
+                        <div class="group">
+                            <input type="checkbox" name="1-2_times">
+                            <label for="1-2 times">1-2 times</label>
+                        </div>
+                        <div class="group">
+                            <input type="checkbox" name="3-4_times">
+                            <label for="exercising">3-4 times</label>
+                        </div>
+                        <div class="group">
+                            <input type="checkbox" name="5-6_times">
+                            <label for="5-6 times">5-6 times</label>
+                        </div>
+                    </div>
+                        
+                    <footer>
+                        <a href="page4_mcu.html" class="previous round">&#8249;</a>
+                        <a href="page6_mcu.html" class="next round">&#8250;</a>
+                     </footer>
+        
+             <style>
+                input {
+                    position: relative;
+                    width: 20px;
+                    height: 20px;
+                    background-color: #cfcfcf;
+                    border-radius: .25rem;
+                    appearance: none;
+                    cursor: pointer;
+                }
+                input[type="checkbox"]:checked{
+                background-color: lightgreen;
+                }
+                input[type="checkbox"]::before{
+                content: '';
+                position: absolute;
+                top: 3px;
+                left: 7px;
+                width: 7px;
+                height: 13px;
+                border: 4px solid transparent;
+                border-left: none;
+                border-top: none;
+                transform: rotate(45deg) scale(1);
+                }
+                input[type="checkbox"]:checked:before{
+                border-color: #fff;
+                animation: checkAnim .2s ease;
+                }
+                label{
+                    font-size: 1rem;
+                    user-select: none;
+            
+                }
+                a {
+                text-decoration: none;
+                display: inline-block;
+                padding: 8px 16px;
+                }
+            
+                a:hover {
+                background-color: #ddd;
+                color: black;
+                }
+            
+                .previous {
+                background-color: #f1f1f1;
+                color: black;
+                }
+            
+                .next {
+                background-color: #04AA6D;
+                color: white;
+                }
+            
+                .round {
+                border-radius: 50%;
+                }
+                /* Chrome, Safari, Edge, Opera */
+                input::-webkit-outer-spin-button,
+                input::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+                }
+                footer {
+                padding: 20px;
+                }
+
+                /* Firefox */
+                input[type=number] {
+                -moz-appearance: textfield;
+                width: 70px;
+                height: 25px;
+                background-color: #fff;
+                }
+            </style>  

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+  <title>{{ config('app.name', 'kuisioner') }}</title>
+
+  <!-- General CSS Files -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+  <!-- CSS Libraries -->
+  <link rel="stylesheet" href="{{ url('node_modules/selectric/public/selectric.css') }}">
+
+  <!-- Template CSS -->
+  <link rel="stylesheet" href="{{ url('assets/css/style.css') }}">
+  <link rel="stylesheet" href="{{ url('assets/css/components.css') }}">
+</head>
+<body style="background-color:  #4d98d3;">
+    <div id="app">
+      <section class="section">
+        <div class="container mt-5" style="width: 90vw; max-width: 620px; padding: 2em 2em; background-color: #fff; margin: 1em auto;
+        border-radius: 0.5em;">
+          <div class="row">
+            <div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-8 offset-lg-2 col-xl-8 offset-xl-2">
+            
+              
+                <table width="100%" border="0">
+                    <tr>
+                        <td width="100%" align="center">
+                            <h1>HEALTH QUESTIONNAIRE</h1> 
+                        </td>
+                    </tr>
+                </table>
+                   <div class="wrapper">
+                    <h4>7. Questions regarding on breast center cervical cancer (only for female)</h4> 
+                    <h4>7-1. When was your first menstrual period</h4>    
+                    <div class="group">
+                            <input type="checkbox" name="age">
+                            <label for="age">age</label>
+                        </div>
+                        <div class="group">
+                            <input type="checkbox" name="not_yet">
+                            <label for="not yet">Not yet</label>
+                        </div>
+                    </div>
+                   <di class="wrapper">
+                    <h4>7-2. Do you still have menstrual period</h4>
+                        <div class="group">
+                            <input type="checkbox" name="yes">
+                            <label for="yes">Yes</label><br>
+                            <input type="checkbox" name="uterus">
+                            <label for="uterus">Removed uterus</label><br>
+                            <input type="checkbox" name="monopause">
+                            <label for="monopause">monopause</label>
+                            <label for="duration">(age: </label>
+                            <input type="number" id="duration" name="duration" min="1" max="100">)
+                        </div>
+                    </di>
+                    <h4>7-3. Have you ever taken any medication or hormonal treatmentto relive any menopausal symptoms</h4> 
+                        <div class="group">
+                            <input type="checkbox" name="never">
+                            <label for="never">Never</label>
+                        </div>
+                        <div class="group">
+                            <input type="checkbox" name="2_years">
+                            <label for="2_year">Less than 2 years</label>
+                        </div>
+                        <div class="group">
+                            <input type="checkbox" name="2s/d5_years">
+                            <label for="2s/d5_years">Betwen 2 and 5 years</label>
+                        </div>
+                        <div class="group">
+                            <input type="checkbox" name="5_years">
+                            <label for="5_years">More than 5 years</label>
+                        </div>
+                        <div class="group">
+                            <input type="checkbox" name="no_idea">
+                            <label for="no idea">No idea</label>
+                        </div>
+                    <h4>7-4. How many children do you have</h4> 
+                        <div class="group">
+                            <input type="checkbox" name="one">
+                            <label for="one">one</label>
+                        </div>
+                        <div class="group">
+                            <input type="checkbox" name="2">
+                            <label for="2">More than 2</label>
+                        </div>
+                        <div class="group">
+                            <input type="checkbox" name="experience">
+                            <label for="experience">None experience of delivery</label>
+                        </div>
+                    
+                    <h4>7-5. How long did you breast-feed your children?</h4> 
+                        <div class="group">
+                            <input type="checkbox" name="never">
+                            <label for="never">Never</label>
+                        </div>
+                        <div class="group">
+                            <input type="checkbox" name="2_years">
+                            <label for="2_year">Less than 2 years</label>
+                        </div>
+                        <div class="group">
+                            <input type="checkbox" name="2s/d5_years">
+                            <label for="2s/d5_years">Betwen 2 and 5 years</label>
+                        </div>
+                        <div class="group">
+                            <input type="checkbox" name="5_years">
+                            <label for="5_years">More than 5 years</label>
+                        </div>
+                        <div class="group">
+                            <input type="checkbox" name="no_idea">
+                            <label for="no idea">No idea</label>
+                        </div>
+                    
+                    <h4>7-6. Have you ever taken any birth control pills?</h4> 
+                        <div class="group">
+                            <input type="checkbox" name="1_month">
+                            <label for="never">Less than 1 month</label>
+                        </div>
+                        <div class="group">
+                            <input type="checkbox" name="1_years">
+                            <label for="1_years">More than 1 years</label>
+                        </div>
+                        <div class="group">
+                            <input type="checkbox" name="never">
+                            <label for="never">never</label>
+                        </div>
+                        <div class="group">
+                            <input type="checkbox" name="no_idea">
+                            <label for="no idea">No idea</label>
+                        </div>
+                    </div>
+                 </div>       
+                    <footer>
+                        <a href="page5_mcu.html" class="previous round">&#8249;</a>
+                     </footer>
+        
+             <style>
+                input {
+                    position: relative;
+                    width: 20px;
+                    height: 20px;
+                    background-color: #cfcfcf;
+                    border-radius: .25rem;
+                    appearance: none;
+                    cursor: pointer;
+                }
+                input[type="checkbox"]:checked{
+                background-color: lightgreen;
+                }
+                input[type="checkbox"]::before{
+                content: '';
+                position: absolute;
+                top: 3px;
+                left: 7px;
+                width: 7px;
+                height: 13px;
+                border: 4px solid transparent;
+                border-left: none;
+                border-top: none;
+                transform: rotate(45deg) scale(1);
+                }
+                input[type="checkbox"]:checked:before{
+                border-color: #fff;
+                animation: checkAnim .2s ease;
+                }
+                label{
+                    font-size: 1rem;
+                    user-select: none;
+            
+                }
+                a {
+                text-decoration: none;
+                display: inline-block;
+                padding: 8px 16px;
+                }
+            
+                a:hover {
+                background-color: #ddd;
+                color: black;
+                }
+            
+                .previous {
+                background-color: #f1f1f1;
+                color: black;
+                }
+            
+                .next {
+                background-color: #04AA6D;
+                color: white;
+                }
+            
+                .round {
+                border-radius: 50%;
+                }
+                /* Chrome, Safari, Edge, Opera */
+                input::-webkit-outer-spin-button,
+                input::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+                }
+
+                /* Firefox */
+                input[type=number] {
+                -moz-appearance: textfield;
+                width: 70px;
+                height: 25px;
+                background-color: #fff;
+                }
+            </style>  
